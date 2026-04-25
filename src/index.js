@@ -44,6 +44,18 @@ app.get('/', async (req, res) => {
 });
 
 /**
+ * GET /about
+ * Simple about endpoint
+ */
+app.get('/about', (req, res) => {
+  res.json({
+    app: 'dotNOVI',
+    course: 'DevOps',
+    message: 'About page works'
+  });
+});
+
+/**
  * 404 handler
  */
 app.use((req, res) => {
